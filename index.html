@@ -2,8 +2,310 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
     <title>Задача «Морда»</title>
 </head>
 <body>
+
+    <div class="grid-layout">
+        <input type="checkbox" id="traffic-widget" class="widget-selector" checked>
+        <input type="checkbox" id="weather-widget" class="widget-selector" checked>
+        <input type="checkbox" id="popular-widget" class="widget-selector" checked>
+        <input type="checkbox" id="jokes-widget" class="widget-selector" checked>
+        <input type="checkbox" id="tv-widget" class="widget-selector" checked>
+        <input type="checkbox" id="auto-widget" class="widget-selector" checked>
+        <input type="checkbox" id="map-widget" class="widget-selector" checked>
+        <input type="checkbox" id="poster-widget" class="widget-selector" checked>
+    
+        <div class="location blushing">
+            ⇗ Екатеринбург
+        </div>
+        <div class="settings">
+            <input type="checkbox" id="widget-settings" >
+            <label for="widget-settings">Настройки</label>
+            <div class="setting-control">
+                <ul class="without-dots">
+                    <li><label class="tv" for="tv-widget">Телепрограмма</label></li>
+                    <li><label class="weather" for="weather-widget">Погода</label></li>
+                    <li><label class="traffic" for="traffic-widget">Пробки</label></li>
+                    <li><label class="auto" for="auto-widget">Автоновости</label></li>
+                    <li><label class="map" for="map-widget">Карты Екатеринбург</label></li>
+                    <li><label class="poster" for="poster-widget">Афиша</label></li>
+                    <li><label class="jokes" for="jokes-widget">Лучшие анекдоты</label></li>
+                    <li><label class="popular" for="popular-widget">Посещаемое
+                        </label></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="account-block">
+            <div class="account-info">
+                <div class="account_name bold">login</div>
+                <a class="blushing black bold" href="https://mail.yandex.ru/">Почта 90</a>
+            </div>
+        </div>
+        <div class="news-block">
+            <input type="radio" name="news_tabs" id="tab1" checked>
+            <input type="radio" name="news_tabs" id="tab2">
+            <div class="news-header">
+                <label class="tab-label tab1 blue blushing" for="tab1"><span>Сейчас в СМИ</span></label>
+                <label class="tab-label tab2 blue blushing" for="tab2"><span>в Екатеринбурге</span></label>
+                <span class="date">24 февраля, среда 14:23</span>
+            </div>
+            <div class="news-content tab1">
+                <ul>
+                    <li>Уезжающих из Кемерова будут провожать песнями и танцами</li>
+                    <li>В Госдуме взломали банкомат</li>
+                    <li>Эксперт-урбанист заявил, что Саратов «спроектирован почти как рай»</li>
+                    <li>В Бурятии пограничники отобрали у монгола кумыс</li>
+                    <li>Саратов стал вторым в рейтинге дешевого оливье</li>
+                </ul>
+            </div>
+            <div class="news-content tab2">
+                <ul>
+                    <li>Полиция ищет очевидцев ДТП с человеком в костюме медведя</li>
+                    <li>В Екатеринбург приехал белощекий гиббон Бобо</li>
+                    <li>В Екатеринбурге загорелся факелоносец</li>
+                    <li>В Екатеринбурге церковь снесла церковь</li>
+                    <li>На Урале пропал водитель, который вёз в Екатеринбург фуру с водкой</li>
+                </ul>
+            </div>
+            <div class="exchange-rates">
+                <a class="rate" href="https://news.yandex.ru/quotes/1.html">USD ЦБ 30,00</a>
+                <a class="rate" href="https://news.yandex.ru/quotes/23.html">EUR ЦБ 40,01</a>
+                <a class="rate" href="https://news.yandex.ru/quotes/1006.html">НЕФТЬ 98,23</a>
+            </div>
+        </div>
+        <div class="advert">
+            <img src="images/yabrowser.png" alt="yandex browser"><br>
+            <a class="blue blushing" href="https://amigo.mail.ru/">Скачайте быстрый и безопасный браузер</a>
+            <p>Техологии будущего</p>
+        </div>
+        <div class="logo">
+            <img src="images/logo.png" alt="yandex logo">
+        </div>
+        <div class="search">
+            <div class="sections">
+                <a class="blue blushing" href="https://goo.gl/yfdwf7">Видео</a>
+                <a class="blue blushing" href="#">Картинки</a>
+                <a class="blue blushing" href="#">Новости</a>
+                <a class="blue blushing" href="#">Карты</a>
+                <a class="blue blushing" href="#">Маркет</a>
+                <a class="blue blushing" href="#">Переводчик</a>
+                <a class="blue blushing" href="#">Музыка</a>
+                <a class="blue blushing" href="#">ещё</a>
+            </div>
+            <div class="search-line">
+                <form id="search-form" action="https://go.mail.ru/search?" method="get">
+                    <input class="search-input" type="text" name="q">
+                    <button class="search-button">Найти</button>
+                </form>
+            </div>
+            <div class="search-exapmple">
+                <span>Найдётся всё. Например,</span>
+                <a href="https://goo.gl/E57oQs">как начать задание по верстке не в последний день</a>
+            </div>
+
+        </div>
+        <div class="foreign_advert">
+            <img src="images/wide-photo.jpg" alt="just wide-photo">
+        </div>
+        <div class="widgets">
+
+            <div class="column">
+                <div class="widget popular">
+                    <a href="#" class="widget-title">
+                        <span class="blue blushing">Посещаемое</span>
+                    </a>
+                    <div class="widget-content">
+                        <span class="bold">Маркет</span>— китайская распродажа<br>
+                        <span class="bold">Авто.ру</span>— Туссан третьей серии<br>
+                        <span class="bold">Недвижимость</span>— продажа студии<br>
+                        <span class="bold">Работа</span>— охранником<br>
+                        <span class="bold">Здоровье</span>— врач на связи<br>
+                        <span class="bold">Коллекции</span>— как мелировать волосы<br>
+                        <span class="bold">Авиабилеты</span>— из Екатеринбурга<br>
+                    </div>
+                </div>
+                <div class="widget map">
+                    <a href="#" class="widget-title">
+                        <span class="blue blushing">Карта Екатеринбурга</span>
+                    </a>
+                    <div class="widget-content black bold">
+                        <span>Такси</span>
+                        <span>Расписания</span>
+                        <span>Междугородние автобусы</span>
+                    </div>
+                </div>
+
+                <div class="widget jokes">
+                    <a href="#" class="widget-title">
+                        <span class="blue blushing">Лучшие анекдоты</span>
+                    </a>
+                    <div class="widget-content jokes-block">
+                        <input type="radio" name="jokes" id="joke1" checked>
+                        <input type="radio" name="jokes" id="joke2">
+                        <input type="radio" name="jokes" id="joke3">
+                        <input type="radio" name="jokes" id="joke4">
+                        <input type="radio" name="jokes" id="joke5">
+                        <div class="joke1-content">
+                            <p>
+                                    Мой преподаватель говорил, что мы должны любить его предмет.
+                                     Завалив у него экзамен я сказал,
+                                      что все мы совершаем глупости, когда влюблены.
+                            </p>
+                            <label for="joke2">↻ Показать еще</label>
+                        </div>
+                        <div class="joke2-content">
+                            <p>
+                                - Чем занимаешься?<br>
+                                - Стендапом<br>
+                                - Чувак, соболезную. Если бы я только знал... 
+                                Может тебе чем-то помочь? У нас на работе недавно был курьёз...
+                            </p>
+                            <label for="joke3">↻ Показать еще</label>
+                        </div>
+                        <div class="joke3-content">
+                            <p>
+                                — Ислам — это такая религия, в которой запрещены майские праздники.<br>
+                                — Вообще-то в Исламе запрещены свинина и алкоголь.<br>— А я как сказал?
+                            </p>
+                            <label for="joke4">↻ Показать еще</label>
+                        </div>
+                        <div class="joke4-content">
+                            <p>
+                                — Никогда не отказывайся от того, что заставляет тебя улыбаться.<br>
+                                — Ты очень мудрый барыга.
+                            </p>
+                            <label for="joke5">↻ Показать еще</label>
+                        </div>
+                        <div class="joke5-content">
+                            <p>
+                                Надеюсь, мне сегодня придет рабочая задача нарисовать 
+                                динозавров в черных цилиндрах,
+                                потому что я это уже сделал и тогда смогу пораньше уйти
+                            </p>
+                            <label for="joke1">↻ Показать еще</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="widget weather">
+                    <a href="#" class="widget-title">
+                        <span class="blue blushing">Погода</span>
+                        <img src="images/weather.png" alt="weather">
+                        <span class="black blushing">−2 °C</span>
+                    </a>
+                    <div class="widget-content">
+                        Ночь −2,  утро −2
+                    </div>
+                </div>
+                <div class="widget traffic">
+                    <a href="#" class="widget-title">
+                        <span class="blue blushing">Пробки</span>
+                        <img src="images/traffic.png" alt="traffic">
+                        <span class="black blushing">1 Балл</span>
+                    </a>
+                    <div class="widget-content">
+                        Дороги почти свободны
+                    </div>
+                </div>
+                <div class="widget auto-news auto">
+                    <a href="#" class="widget-title">
+                        <span class="blue blushing">Автомобильные новости</span>
+                    </a>
+                    <div class="widget-content">
+                        <ul class="without-dots">
+                            <li>В Калифорнии продают «Ниву» 1980 года выпуска за $7600</li>
+                            <li>Hyundai Ioniq стал лучшим женским автомобилем года</li>
+                            <li>В Екатеринбурге проходят испытания троллейбуса 
+                                с возможностью автономного хода</li>
+                            <li>НАМИ приступил к производству предсерийной партии 
+                                автомобилей проекта «Кортеж»</li>
+                            <li>Региональным властям разрешат выбирать, 
+                                кого пускать на выделенные полосы</li>
+                            <li>В Лондоне автобусы переводят на «кофейное топливо»</li>
+                            <li>Volvo объявила российские цены на новый XC60</li>
+                            <li>Tesla может выпустить огромный пикап</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="widget tv">
+                    <a href="#" class="widget-title">
+                        <span class="blue blushing">Телепрограмма</span>
+                    </a>
+                    <div class="widget-content">
+                        <ul class="without-dots">
+                            <li>
+                                <span class="show_time">21:00</span>
+                                <span>Трансформеры</span>
+                                <span class="additional">СТС</span>
+                            </li>
+                            <li>
+                                <span class="show_time">21:00</span>
+                                <span>Время</span>
+                                <span class="additional">Первый</span>
+                            </li>
+                            <li>
+                                <span class="show_time">21:30</span>
+                                <span>Вечерний Ургант</span>
+                                <span class="additional">Первый</span>
+                            </li>
+                            <li>
+                                <span class="show_time">23:30</span>
+                                <span>Россия футбольная</span>
+                                <span class="additional">Матч!</span>
+                            </li>
+                            <li>
+                                <span class="show_time">00:10</span>
+                                <span>"Новая фабрика звёзд". Дневник</span>
+                                <span class="additional">МУЗ-ТВ</span>
+                            </li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="widget poster">
+                    <a href="#" class="widget-title">
+                        <span class="blue blushing">Афиша</span>
+                    </a>
+                    <div class="widget-content">
+                        <ul class="without-dots">
+                            <li class="show-item">
+                                Субурбикон
+                                <span class="additional">премьера в чт</span>
+                            </li>
+                            <li class="show-item">
+                                Последний богатырь
+                                <span class="additional">приключения</span>
+                            </li>
+                            <li class="show-item">
+                                Фиксики: Большой секрет
+                                <span class="additional">мультфильм</span>
+                            </li>
+                            <li class="show-item">
+                                Тор: Рагнарёк
+                                <span class="additional">фэнтези</span>
+                            </li>
+                            <li class="show-item">
+                                Убийство в Восточном...
+                                <span class="additional">драма</span>
+                            </li>
+                            <li class="show-item">
+                                <span class="bold">Концерты — Brainstorm</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
 </body>
 </html>

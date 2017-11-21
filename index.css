@@ -1,0 +1,373 @@
+.grid-layout
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 'location empty1 empty2 user user'
+        'divempty news news advert empty4'
+        'logo search search search empty5'
+        'empty3 wadvert wadvert wadvert empty6'
+        'empty8 widget widget widget empty7';
+    grid-gap: 8px;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+ul
+{
+    padding: 0;
+}
+
+.settings
+{
+    grid-area: user;
+    text-align: center;
+}
+
+.news-block
+{
+    grid-area: news;
+    text-align: left;
+}
+
+.search
+{
+    grid-area: search;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+
+.search-line
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.search-line form
+{
+    font-size: 0;
+    height: 35px;
+}
+
+.search-input
+{
+    height: 100%;
+    padding-left: 3px;
+    box-sizing: border-box;
+    width: 88%;
+    border: 3px #ffd748 solid;
+}
+
+.sections a
+{
+    margin-right: 10px;
+}
+
+.widget-content
+{
+    margin-top: 12px;
+}
+
+.widget
+{
+    margin-bottom: 20px;
+}
+
+.search-button
+{
+    width: 12%;
+    border: none;
+    height: 100%;
+    background-color: #ffd748;
+}
+
+.widgets
+{
+    margin-top: 10px;
+    grid-area: widget;
+    display: flex;
+}
+
+.advert
+{
+    grid-area: advert;
+    text-align: center;
+    padding-right: 20%;
+}
+
+.foreign_advert
+{
+    grid-area: wadvert;
+}
+
+.foreign_advert img
+{
+    width: 100%;
+}
+
+.account-block
+{
+    grid-area: user;
+}
+
+.account-info
+{
+    float: right;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(128, 128, 128, .62);
+}
+
+.logo
+{
+    grid-area: logo;
+    vertical-align: middle;
+}
+
+.logo img
+{
+    width: 50%;
+    float: right;
+}
+
+input[type='radio']
+{
+    display: none;
+}
+
+.tab-label
+{
+    opacity: .6;
+    font-size: 130%;
+    margin: 5px;
+}
+
+.date
+{
+    opacity: .6;
+    margin-left: 5px;
+    font-size: 80%;
+}
+
+#tab1:checked ~ div .tab1
+{
+    opacity: 1;
+}
+
+.news-content ul
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#tab1:checked ~ .news-content.tab2
+{
+    display: none;
+}
+
+#tab2:checked ~ .news-content.tab1
+{
+    display: none;
+}
+
+#tab2:checked ~ div .tab2
+{
+    opacity: 1;
+}
+
+.news-block .tab-label,
+.news-block li
+{
+    cursor: pointer;
+}
+
+li
+{
+    margin: 5px;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.rate
+{
+    color: black;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.location
+{
+    grid-area: location;
+    color: gray;
+    opacity: .8;
+    cursor: pointer;
+    padding: 7%;
+}
+
+.blue
+{
+    color: #0459b9;
+}
+
+span
+{
+    display: inline-block;
+}
+
+.black
+{
+    color: black;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.blushing:hover
+{
+    color: #db2c11;
+    opacity: 1;
+}
+
+ul.without-dots
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+span.additional
+{
+    opacity: .8;
+    color: gray;
+    margin-left: 5px;
+    font-size: 90%;
+}
+
+.jokes-block div
+{
+    display: none;
+}
+
+.jokes-block #joke1:checked ~ .joke1-content,
+.jokes-block #joke2:checked ~ .joke2-content,
+.jokes-block #joke3:checked ~ .joke3-content,
+.jokes-block #joke4:checked ~ .joke4-content,
+.jokes-block #joke5:checked ~ .joke5-content
+{
+    display: block;
+}
+
+.jokes-block p
+{
+    width: 90%;
+    height: 120px;
+}
+
+.show_time
+{
+    margin-right: 5px;
+}
+
+.widget-title
+{
+    font-size: 120%;
+}
+
+.account_name::first-letter
+{
+    color: red;
+}
+
+.auto-news
+{
+    height: 100px;
+}
+
+.auto-news ul
+{
+    margin-top: 10px;
+    height: 200px;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.column
+{
+    width: 33%;
+    margin-left: 10px;
+}
+
+.widgets img
+{
+    margin-bottom: -5px;
+}
+
+.settings > input
+{
+    display: none;
+}
+
+.setting-control
+{
+    display: none;
+}
+
+#widget-settings:checked ~ .setting-control
+{
+    display: block;
+}
+
+#tv-widget:not(:checked) ~ .widgets .tv,
+#auto-widget:not(:checked) ~ .widgets .auto,
+#weather-widget:not(:checked) ~ .widgets .weather,
+#popular-widget:not(:checked) ~ .widgets .popular,
+#poster-widget:not(:checked) ~ .widgets .poster,
+#map-widget:not(:checked) ~ .widgets .map,
+#jokes-widget:not(:checked) ~ .widgets .jokes,
+#traffic-widget:not(:checked) ~ .widgets .traffic
+{
+    display: none;
+}
+
+.settings li label
+{
+    font-weight: bold;
+}
+
+#tv-widget:not(:checked) ~ .settings .tv,
+#auto-widget:not(:checked) ~ .settings .auto,
+#weather-widget:not(:checked) ~ .settings .weather,
+#popular-widget:not(:checked) ~ .settings .popular,
+#poster-widget:not(:checked) ~ .settings .poster,
+#map-widget:not(:checked) ~ .settings .map,
+#jokes-widget:not(:checked) ~ .settings .jokes,
+#traffic-widget:not(:checked) ~ .settings .traffic
+{
+    font-weight: normal;
+}
+
+input.widget-selector
+{
+    display: none;
+}
+
+.setting-control
+{
+    position: fixed;
+    right: 200px;
+    margin-top: 10px;
+    z-index: 100;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(128, 128, 128, .62);
+    font-size: 80%;
+    text-align: left;
+}
