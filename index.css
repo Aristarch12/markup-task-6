@@ -337,6 +337,25 @@ span.additional
     display: none;
 }
 
+.column-1,
+.column-2,
+.column-3
+{
+    display: none;
+}
+
+#tv-widget:checked ~ .widgets .column-3,
+#auto-widget:checked ~ .widgets .column-2,
+#weather-widget:checked ~ .widgets .column-2,
+#popular-widget:checked ~ .widgets .column-1,
+#poster-widget:checked ~ .widgets .column-3,
+#map-widget:checked ~ .widgets .column-1,
+#jokes-widget:checked ~ .widgets .column-1,
+#traffic-widget:checked ~ .widgets .column-2
+{
+    display: block;
+}
+
 .settings li label
 {
     font-weight: bold;
@@ -354,6 +373,35 @@ span.additional
     font-weight: normal;
 }
 
+#tv-widget:not(:checked) ~ .settings .tv::before,
+#auto-widget:not(:checked) ~ .settings .auto::before,
+#weather-widget:not(:checked) ~ .settings .weather::before,
+#popular-widget:not(:checked) ~ .settings .popular::before,
+#poster-widget:not(:checked) ~ .settings .poster::before,
+#map-widget:not(:checked) ~ .settings .map::before,
+#jokes-widget:not(:checked) ~ .settings .jokes::before,
+#traffic-widget:not(:checked) ~ .settings .traffic::before
+{
+    content: '\00a0\00a0\00a0 ';
+}
+
+#tv-widget:checked ~ .settings .tv::before,
+#auto-widget:checked ~ .settings .auto::before,
+#weather-widget:checked ~ .settings .weather::before,
+#popular-widget:checked ~ .settings .popular::before,
+#poster-widget:checked ~ .settings .poster::before,
+#map-widget:checked ~ .settings .map::before,
+#jokes-widget:checked ~ .settings .jokes::before,
+#traffic-widget:checked ~ .settings .traffic::before
+{
+    content: '✔ ';
+}
+
+.settings label
+{
+    cursor: pointer;
+}
+
 input.widget-selector
 {
     display: none;
@@ -361,8 +409,8 @@ input.widget-selector
 
 .setting-control
 {
-    position: fixed;
-    right: 200px;
+    position: absolute;
+    left: 80%;
     margin-top: 10px;
     z-index: 100;
     padding: 10px;
